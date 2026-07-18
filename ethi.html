@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ኢትዮ ፔስት ኢንሴክት ሶልሽን - የጸረ ተባይ አገልግሎት</title>
+    <style>
+        /* ጠቅላላ ቅንብሮች */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ራስጌ (Header) */
+        header {
+            background-color: #1e4620;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #a3e2a6;
+        }
+
+        /* ዋና መፈክር (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(30, 70, 32, 0.8), rgba(30, 70, 32, 0.8)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .cta-btn {
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #e68a00;
+        }
+
+        /* ዋናው ክፍል */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h3 {
+            color: #1e4620;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h3::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ff9800;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* አገልግሎቶች (Services Grid) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid #1e4620;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-card h4 {
+            color: #1e4620;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        /* ለምን እኛ? (Features) */
+        .features {
+            background-color: #e8f0e9;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .feature-item h4 {
+            color: #1e4620;
+            margin-bottom: 10px;
+        }
+
+        /* አድራሻ እና መገናኛ */
+        .contact-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .phone-link {
+            display: inline-block;
+            background-color: #1e4620;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .phone-link:hover {
+            background-color: #153316;
+        }
+
+        /* ግርጌ (Footer) */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* ለስልክ ስክሪን ማስተካከያ */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 1.8rem; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ራስጌ -->
+    <header>
+        <h1>ኢትዮ ፔስት ኢንሴክት ሶልሽን</h1>
+        <p>የታማኝ እና የባለሙያ ጸረ ተባይ አገልግሎት</p>
+    </header>
+
+    <!-- ዋና መፈክር -->
+    <section class="hero">
+        <h2>ለጤናዎ እና ለንብረትዎ ዋስትና እንሰጣለን!</h2>
+        <p>በዘመናዊ መሣሪያዎች፣ ፍቃድ ባላቸው ኬሚካሎች እና ከፍተኛ ልምድ ባላቸው ባለሙያዎች የታገዘ አስተማማኝ እና ወቅቱን የጠበቀ የጸረ-ተባይ ማጥፋት አገልግሎት በሁሉም የኢትዮጵያ ከተሞች።</p>
+        <a href="#contact" class="cta-btn">አሁኑኑ ይደውሉልን</a>
+    </section>
+
+    <div class="container">
+        
+        <!-- አገልግሎቶች -->
+        <section>
+            <h3>የምንሰጣቸው አገልግሎቶች</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>🏨 ለሆቴሎች እና ለሬስቶራንቶች</h4>
+                    <p>የደንበኞችዎን ሰላምና የድርጅትዎን ስም ለመጠበቅ ከማንኛውም ተባይ (በረሮ፣ አይጥ፣ ትንኝ) ሙሉ በሙሉ የጸዳ አካባቢ እንፈጥራለን።</p>
+                </div>
+                <div class="service-card">
+                    <h4>🏢 ለመንግስት እና ለግል ድርጅቶች</h4>
+                    <p>ሰራተኞችዎ በተረጋጋ፣ ፅዱ እና በጤናማ ከባቢ አየር ውስጥ ስራቸውን እንዲያከናውኑ አስተማማኝ ቁጥጥር እናደርጋለን።</p>
+                </div>
+                <div class="service-card">
+                    <h4>🌾 ለግብርና እርሻ ቦታዎች</h4>
+                    <p>የእርሻ ምርትዎን ከሚያጠፉ ተባዮችና በሽታዎች ለመከላከል ሳይንሳዊ በሆነ መንገድ በባለሙያ የታገዘ ስራ እንሰራለን።</p>
+                </div>
+                <div class="service-card">
+                    <h4>📦 ለማጋዘኖች</h4>
+                    <p>ምርቶችዎ ሳይበላሹ፣ ሳይበከሉ እና ሳይቀነሱ ለረጅም ጊዜ እንዲቀመጡ ከአይጥ እና ከሌሎች ተባዮች ሙሉ በሙሉ እንጠብቃለን።</p>
+                </div>
+                <div class="service-card">
+                    <h4>🏠 ለመኖሪያ ቤቶች</h4>
+                    <p>እርስዎና ቤተሰብዎ ከበሽታ ነፃ በሆነ እና ሰላማዊ በሆነ ቤት ውስጥ እንዲኖሩ ማንኛውንም አይነት የቤት ውስጥ ተባዮችን እናጠፋለን።</p>
+                </div>
+                <div class="service-card">
+                    <h4>📋 የባለሙያ ምክር አገልግሎት</h4>
+                    <p>ተባዮች በድጋሚ እንዳይከሰቱ ምን ማድረግ እንዳለብዎ በባለሙያ የታገዘ የሙያዊ የምክር አገልግሎት እንሰጣለን።</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ለምን እኛ? -->
+        <section class="features">
+            <h3>ለምን እኛን ይመርጣሉ?</h3>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h4>💪 ከፍተኛ ልምድ</h4>
+                    <p>በዘርፉ እጅግ ከፍተኛ ልምድ እና ሙያ ያላቸው ሰራተኞች አሉን።</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🧪 ዘመናዊ መሣሪያ እና ኬሚካል</h4>
+                    <p>ወቅቱን የጠበቁ አስተማማኝ መሣሪያዎችን እና ጥራት ያላቸው ኬሚካሎችን እንጠቀማለን።</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🗺️ ሰፊ ተደራሽነት</h4>
+                    <p>አዲስ አበባ፣ ድሬዳዋ እና በሁሉም የክልል ከተሞች መጥተን እንሰራለን።</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- አድራሻ እና መገናኛ -->
+        <section class="contact-section" id="contact">
+            <h3>ያግኙን / ይዘዙን</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">አስተማማኝ አገልግሎት ለማግኘት አሁኑኑ በስልክ ቁጥሮቻችን ይደውሉልን። ባለሙያዎቻችን ያሉበት ቦታ ድረስ ይመጣሉ።</p>
+            
+            <div class="contact-info">
+                <p><strong>📍 የአገልግሎት ክልል፡</strong> አዲስ አበባ ፣ ድሬዳዋ እና በሁሉም የክልል ከተሞች</p>
+                <div style="margin-top: 20px;">
+                    <a href="tel:+251932342671" class="phone-link">📞 +251 932 342 671</a>
+                    <a href="tel:+251946448343" class="phone-link">📞 +251 946 448 343</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ግርጌ -->
+    <footer>
+        <p>&copy; 2026 ኢትዮ ፔስት ኢንሴክት ሶልሽን። መብቱ በሕግ የተጠበቀ ነው።</p>
+    </footer>
+
+</body>
+</html>
